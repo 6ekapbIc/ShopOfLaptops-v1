@@ -1,0 +1,9 @@
+﻿<h1>Laptops</h1>
+<div class="row mt-5 mb-2">
+    @{ 
+        foreach(Shop.Data.Models.Laptop laptop in Model.allLaptops)
+        {
+            @Html.Partial("AllLaptops", laptop)
+        }
+    }
+</div>

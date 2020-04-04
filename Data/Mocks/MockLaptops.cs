@@ -1,0 +1,155 @@
+﻿using Shop.Data.Interfaces;
+using Shop.Data.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Shop.Data.Mocks
+{
+    public class MockLaptops : IAllLaptops
+    {
+        private readonly ILaptopCategory _categoryLaptops = new MockCategory();
+        public IEnumerable<Laptop> Laptops
+        {
+            get
+            {
+                return new List<Laptop>
+                {
+                    new Laptop{name="HP Pavillion Gaming 15", 
+                        available=10, 
+                        camera=true, 
+                        backlight=true, 
+                        diagonal=15.6, 
+                        frequencyOfDisplay=144, 
+                        frequencyOfProcessor= 4.5, 
+                        modelOfProcessor="Core I7 9750h", 
+                        modelOfVideoCard="GTX 1660ti with design MAXQ",
+                        os="FreeDos", 
+                        price=400000, 
+                        ram=8, 
+                        shortDescription="Core I7 9750h/GTX 1660ti with design MAXQ/FreeDos/8GB RAM/500GB SSD/144HZ IPS", 
+                        slotsOfRam=2, 
+                        typeOfDisplay="IPS", 
+                        typeOfMemory="SSD", 
+                        volumeOfMemory="500 GB", 
+                        volumeOfVideoCard="6 GB", 
+                        weight=2.3, 
+                        img="/img/apple.jpg", 
+                        Category = _categoryLaptops.AllCategories.First()},
+                    new Laptop{name="Asus Rog Zephyrus M",
+                        available=10, 
+                        camera=true,
+                        backlight=true,
+                        diagonal=15.6,
+                        frequencyOfDisplay=240,
+                        frequencyOfProcessor= 4.5,
+                        modelOfProcessor="Core I7 9750h",
+                        modelOfVideoCard="GTX 1070",
+                        os="WINDOWS 10 PRO",
+                        price=600000,
+                        ram=8,
+                        shortDescription="Core I7 9750h/GTX 1070/Windows 10 PRO/32GB RAM/512GB M2/144HZ IPS",
+                        slotsOfRam=2,
+                        typeOfDisplay="IPS",
+                        typeOfMemory="M2",
+                        volumeOfMemory="512 GB",
+                        volumeOfVideoCard="6 GB",
+                        weight=2.45,
+                        img="/img/acer1.png",
+                        Category = _categoryLaptops.AllCategories.First()},
+                    new Laptop{name="Lenovo",
+                        available=10,
+                        camera=true,
+                        backlight=true,
+                        diagonal=15.6,
+                        frequencyOfDisplay=240,
+                        frequencyOfProcessor= 4.5,
+                        modelOfProcessor="Core I7 9750h",
+                        modelOfVideoCard="GTX 1070",
+                        os="WINDOWS 10 PRO",
+                        price=600000,
+                        ram=8,
+                        shortDescription="Core I7 9750h/GTX 1070/Windows 10 PRO/32GB RAM/512GB M2/144HZ IPS",
+                        slotsOfRam=2,
+                        typeOfDisplay="IPS",
+                        typeOfMemory="M2",
+                        volumeOfMemory="512 GB",
+                        volumeOfVideoCard="6 GB",
+                        weight=2.45,
+                        img="/img/nitro.jpg",
+                        Category = _categoryLaptops.AllCategories.First()},
+                    new Laptop{name="Asus Rog Zephyrus M",
+                        available=10,
+                        camera=true,
+                        backlight=true,
+                        diagonal=15.6,
+                        frequencyOfDisplay=240,
+                        frequencyOfProcessor= 4.5,
+                        modelOfProcessor="Core I7 9750h",
+                        modelOfVideoCard="GTX 1070",
+                        os="WINDOWS 10 PRO",
+                        price=600000,
+                        ram=8,
+                        shortDescription="Core I7 9750h/GTX 1070/Windows 10 PRO/32GB RAM/512GB M2/144HZ IPS",
+                        slotsOfRam=2,
+                        typeOfDisplay="IPS",
+                        typeOfMemory="M2",
+                        volumeOfMemory="512 GB",
+                        volumeOfVideoCard="6 GB",
+                        weight=2.45,
+                        img="/img/acer1.png",
+                        Category = _categoryLaptops.AllCategories.First()},
+                    new Laptop{name="Asus Rog Zephyrus M",
+                        available=10,
+                        camera=true,
+                        backlight=true,
+                        diagonal=15.6,
+                        frequencyOfDisplay=240,
+                        frequencyOfProcessor= 4.5,
+                        modelOfProcessor="Core I7 9750h",
+                        modelOfVideoCard="GTX 1070",
+                        os="WINDOWS 10 PRO",
+                        price=600000,
+                        ram=8,
+                        shortDescription="Core I7 9750h/GTX 1070/Windows 10 PRO/32GB RAM/512GB M2/144HZ IPS",
+                        slotsOfRam=2,
+                        typeOfDisplay="IPS",
+                        typeOfMemory="M2",
+                        volumeOfMemory="512 GB",
+                        volumeOfVideoCard="6 GB",
+                        weight=2.45,
+                        img="/img/acer1.png",
+                        Category = _categoryLaptops.AllCategories.First()},
+                    new Laptop{name="Asus Rog Zephyrus M",
+                        available=10,
+                        camera=true,
+                        backlight=true,
+                        diagonal=15.6,
+                        frequencyOfDisplay=240,
+                        frequencyOfProcessor= 4.5,
+                        modelOfProcessor="Core I7 9750h",
+                        modelOfVideoCard="GTX 1070",
+                        os="WINDOWS 10 PRO",
+                        price=600000,
+                        ram=8,
+                        shortDescription="Core I7 9750h/GTX 1070/Windows 10 PRO/32GB RAM/512GB M2/144HZ IPS",
+                        slotsOfRam=2,
+                        typeOfDisplay="IPS",
+                        typeOfMemory="M2",
+                        volumeOfMemory="512 GB",
+                        volumeOfVideoCard="6 GB",
+                        weight=2.45,
+                        img="/img/acer1.png",
+                        Category = _categoryLaptops.AllCategories.First()}
+                };
+            }
+        }
+        public IEnumerable<Laptop> getAvailableLaptops { get; set; }
+
+        public Laptop getObjectLaptop(int laptopId)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
